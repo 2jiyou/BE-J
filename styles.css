@@ -97,8 +97,9 @@ h2 {
 }
 
 #calendar div {
+    margin-top: 10px;
     min-height: 70px;
-    background-color: #eaeaea;
+    background-color: #FAF6F0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,7 +239,7 @@ h2 {
 
 #add-todo-button {
     width: 20%;
-    background-color: #4CAF50;
+    background-color: #508D69;
     color: white;
     border: none;
     padding: 10px;
@@ -248,7 +249,7 @@ h2 {
 }
 
 #add-todo-button:hover {
-    background-color: #45a049;
+    background-color: #508D69;
 }
 
 /* 삭제 버튼 스타일 */
@@ -361,7 +362,7 @@ h2 {
 /* 오늘의 일정 추가 버튼 스타일 */
 #add-today-schedule {
     width: 20%; /* 버튼의 너비를 전체의 27%로 설정 */
-    background-color: #4CAF50;
+    background-color: #508D69;
     color: white;
     border: none;
     padding: 10px;
@@ -371,7 +372,7 @@ h2 {
 }
 
 #add-today-schedule:hover {
-    background-color: #45a049;
+    background-color: #508D69;
 }
 /* 오늘의 일정에서 선택된 날짜 스타일링 */
 #dateHeader {
