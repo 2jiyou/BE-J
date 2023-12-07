@@ -186,7 +186,24 @@ function updateTodoListUI() {
 
     todos.forEach((todoText, index) => {
         const newItem = document.createElement('li');
-        // 할 일 항목 추가 관련 코드
+        newItem.className = 'todo-item'; // 할 일 항목에 클래스 추가
+
+        // 여기에 체크박스를 추가합니다.
+        const checkboxLabel = document.createElement('label');
+        checkboxLabel.className = 'checkbox-container';
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+
+        const customCheckbox = document.createElement('span');
+        customCheckbox.className = 'custom-checkbox';
+
+        checkboxLabel.appendChild(checkbox);
+        checkboxLabel.appendChild(customCheckbox);
+
+        newItem.appendChild(checkboxLabel);
+
+        // 나머지 할 일 항목 관련 코드
         const textSpan = document.createElement('span');
         textSpan.textContent = todoText;
         textSpan.classList.add('todo-text');
@@ -229,6 +246,7 @@ function updateTodoListUI() {
         todoList.appendChild(newItem);
     });
 }
+
 
 function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos));
