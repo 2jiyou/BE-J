@@ -176,7 +176,7 @@ h2 {
 
 /* 할 일 목록 스타일 */
 #todo-list-container {
-    margin-top: 60px;
+    margin-top: 80px;
 }
 /* 기본 텍스트 스타일 (말줄임표 포함) */
 .todo-text {
@@ -279,6 +279,70 @@ h2 {
 
 .edit-btn:hover {
     background-color: #1E88E5;
+}
+
+/* 할 일 목록 체크박스 스타일 */
+#todo-list-container .checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 3px; /* 체크박스 간 간격 설정 */
+}
+
+/* 할 일 목록 숨겨진 기본 체크박스 */
+#todo-list-container .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* 할 일 목록 커스텀 체크박스 디자인 */
+#todo-list-container .checkbox-container .custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+}
+
+/* 할 일 목록 체크박스에 마우스를 올렸을 때 */
+#todo-list-container .checkbox-container:hover .custom-checkbox {
+    background-color: #ccc;
+}
+
+/* 할 일 목록 체크박스 선택 시 */
+#todo-list-container .checkbox-container input:checked ~ .custom-checkbox {
+    background-color: #2196F3;
+}
+
+/* 할 일 목록 체크 표시 스타일 */
+#todo-list-container .checkbox-container .custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* 할 일 목록 체크박스 선택 시 체크 표시 보이기 */
+#todo-list-container .checkbox-container input:checked ~ .custom-checkbox:after {
+    display: block;
+}
+
+/* 할 일 목록 체크 표시 디자인 */
+#todo-list-container .checkbox-container .custom-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
 }
 
 /* 오늘의 일정 컨테이너 스타일 */
